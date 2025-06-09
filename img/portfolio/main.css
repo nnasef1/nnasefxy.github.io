@@ -1,0 +1,94 @@
+
+@charset "utf-8";
+
+// Theme Colors
+$theme-primary: #F05F40;
+$theme-dark: #222;
+
+// Portfolio Box
+.portfolio-box {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.portfolio-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.portfolio-box-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(240, 95, 64, 0.8); /* Orange Overlay */
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.portfolio-box:hover .portfolio-box-caption {
+  opacity: 1;
+}
+
+.portfolio-box-caption-content {
+  padding: 20px;
+}
+
+.project-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+// Divider
+.section-divider {
+  width: 100%;
+  text-align: center;
+  margin: 100px 0 60px;
+}
+
+.section-divider h2 {
+  font-size: 2.5rem;
+  color: #f05f40;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.section-divider hr {
+  border: none;
+  border-top: 4px solid #f05f40;
+  width: 100%;
+}
+
+// Project Descriptions (Modern Light Theme)
+aside {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: 'Open Sans', sans-serif;
+}
+
+aside h2 {
+  color: #f05f40;
+  font-size: 26px;
+  font-weight: 700;
+  border-bottom: 2px solid #f05f40;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+aside p {
+  font-size: 16px;
+  line-height: 1.75;
+  margin-bottom: 20px;
+  text-align: left;
+}

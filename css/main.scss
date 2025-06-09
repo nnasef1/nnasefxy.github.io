@@ -3,42 +3,131 @@
 
 @charset "utf-8";
 
-// Example Defaults
-// $base-font-family: Helvetica, Arial, sans-serif;
-// $base-font-size:   16px;
-// $small-font-size:  $base-font-size * 0.875;
-// $base-line-height: 1.5;
-
-// $spacing-unit:     30px;
-
-// $text-color:       #111;
-// $background-color: #fdfdfd;
-// $brand-color:      #2a7ae2;
-
-// $grey-color:       #828282;
-// $grey-color-light: lighten($grey-color, 40%);
-// $grey-color-dark:  darken($grey-color, 25%);
-
-// // Width of the content area
-// $content-width:    800px;
-
-// $on-palm:          600px;
-// $on-laptop:        800px;
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-
-// variables.less
+// Theme Colors
 $theme-primary: #F05F40;
 $theme-dark: #222;
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "mixins",
-        "base"
-;
+// Import Partials
+@import "mixins", "base";
+
+// Self Portrait Image
+.self-portrait {
+  display: block;
+  margin: 20px auto;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+// Portfolio Grid
+.portfolio-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+  border: none;
+  padding: 0;
+  background: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.portfolio-box:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.portfolio-box-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(240, 95, 64, 0.85); // Orange overlay
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.portfolio-box:hover .portfolio-box-caption {
+  opacity: 1;
+}
+
+.portfolio-box-caption-content {
+  text-align: center;
+  padding: 10px;
+}
+
+.project-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#portfolio .row {
+  padding: 20px;
+}
+
+// Divider Section
+.section-divider {
+  width: 100%;
+  text-align: center;
+  margin: 100px 0 60px;
+}
+
+.section-divider h2 {
+  font-size: 2.5rem;
+  color: $theme-primary;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.section-divider hr {
+  border: none;
+  border-top: 4px solid $theme-primary;
+  width: 100%;
+}
+
+// Project Description Section
+.project-description {
+  background-color: #fff;
+  padding: 60px 20px;
+  color: #333;
+  border-top: 3px solid $theme-primary;
+  margin-bottom: 80px;
+}
+
+.project-description .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.project-title {
+  color: $theme-primary;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.project-description hr {
+  border: none;
+  border-top: 2px solid $theme-primary;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.project-description p {
+  font-size: 16px;
+  line-height: 1.75;
+  margin-bottom: 20px;
+  text-align: left;
+}
